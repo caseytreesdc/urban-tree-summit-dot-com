@@ -74,7 +74,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 50%;
+    max-width: 65%;
     margin-left: auto;
     padding: 1em 1em 0 1em;
 }
@@ -243,6 +243,19 @@ footer a:focus,
     border-radius: 5px;
 }
 
+.pics {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.pics img {
+    width: 25%;
+    padding: 5px;
+    border-radius: 8px;
+}
+
 .sponsorship-form-container {
     display: flex;
     justify-content: center;
@@ -393,9 +406,7 @@ footer p {
 }
 
 @media (max-width: 1300px) {
-    .navbar-container {
-        max-width: 100%;
-    }
+    
 }
 
 @media (max-width: 1024px) {
@@ -417,51 +428,6 @@ footer p {
         padding: 0 20px 0 0;
     }
 
-    .agenda {
-        text-align: left;
-    }
-
-    .agenda__details {
-        width: 100%;
-    }
-
-    .agenda .description {
-        width: 100%;
-    }
-
-    .navbar {
-        background: rgba(217, 244, 164, 0);
-    }
-
-    .navbar-container {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    .agenda__bio-image {
-        display: block;
-    }
-
-    .agenda__bio-image div {
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .nav-link {
-        display: none;
-        width: 200px;
-        padding: 14px;
-        text-align: right;
-        font-size: 26px;
-    }
-
-    .navbar-container.active .nav-link {
-        display: block;
-        /* background: rgba(217, 244, 164, .8); */
-    }
-
     .hamburger {
         display: flex;
     }
@@ -480,6 +446,51 @@ footer p {
         transform-origin: -6px -5px;
     }
 
+    .navbar {
+        background: rgba(217, 244, 164, 0);
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-link {
+        display: none;
+        width: 200px;
+        padding: 14px;
+        text-align: right;
+        font-size: 26px;
+    }
+
+    .navbar-container.active .nav-link {
+        display: block;
+        /* background: rgba(217, 244, 164, .8); */
+    }
+
+    .agenda {
+        text-align: left;
+    }
+
+    .agenda__details {
+        width: 100%;
+    }
+
+    .agenda .description {
+        width: 100%;
+    }
+
+    .agenda__bio-image {
+        display: block;
+    }
+
+    .agenda__bio-image div {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     .details div {
         display: block;
     }
@@ -493,5 +504,11 @@ footer p {
         width: 100%;
         margin: 20px 0;
     }
+}
 
+@media (max-width: 768px) {
+    .pics img {
+        width: 50%;
+        padding: 5px;
+    }
 }
