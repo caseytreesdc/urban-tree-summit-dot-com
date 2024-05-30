@@ -1,3 +1,5 @@
+window.location.href = "https://urbantreesummit.org";
+
 window.addEventListener('scroll', function () {
     const scrollDown = document.getElementById('scroll-down');
     if (window.scrollY > 0) {
