@@ -27,6 +27,24 @@ body {
     border-radius: 5px;
 }
 
+.main a,
+footer a {
+    color: black;
+    text-decoration-color: var(--g1);
+    text-underline-offset: 2px;
+    text-decoration-thickness: 3px;
+    transition: all 0.3s ease;
+}
+
+.main a:hover,
+.main a:focus,
+footer a:hover,
+footer a:focus {
+    text-underline-offset: 4px;
+    background: rgba(217, 244, 164, .6);
+    border-radius: 5px;
+}
+
 p {
     font-family: var(--open);
     margin: 20px auto;
@@ -36,6 +54,10 @@ h1 {
     font-family: var(--goth);
 }
 
+h2 {
+    margin-top: 2em;
+}
+
 h2,
 h3,
 h4,
@@ -43,10 +65,13 @@ h5 {
     font-family: var(--spartan);
 }
 
+h3 {
+    font-size: 30px;
+}
+
 h4 {
-    font-weight: normal;
+    font-weight: bold;
     font-size: 20px;
-    text-decoration: underline;
 }
 
 h5 {
@@ -62,6 +87,11 @@ hr {
     margin: 80px auto;
     padding: 0;
     width: 75%;
+}
+
+u {
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .navbar {
@@ -81,7 +111,6 @@ hr {
 
 .nav-link {
     color: black;
-    text-decoration: none;
     padding: .5em 30px;
     border: solid 2px rgb(0, 0, 0, 0);
     border-radius: 4px;
@@ -89,12 +118,14 @@ hr {
     transition: background-color 0.3s ease;
     font-family: var(--spartan);
     font-size: 18px;
+    text-decoration-color: var(--g1);
+    text-decoration-thickness: 3px;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    background-color: rgba(174, 212, 77, .8);
-    border: solid 2px rgb(0, 0, 0, .5);
+    background-color: rgba(174, 212, 77, 1);
+    border: solid 2px rgb(0, 0, 0, .3);
 }
 
 .hamburger {
@@ -220,29 +251,6 @@ header img {
     margin: 0 auto;
 }
 
-.info a,
-.agenda a,
-.details a,
-footer a {
-    color: black;
-    text-decoration-color: var(--g1);
-    text-underline-offset: 2px;
-    transition: text-underline-offset 0.3s ease;
-}
-
-.info a:hover,
-.info a:focus,
-.details a:hover,
-.details a:focus,
-footer a:hover,
-footer a:focus,
-.agenda a:hover,
-.agenda a:focus {
-    text-underline-offset: 4px;
-    background: rgba(217, 244, 164, .6);
-    border-radius: 5px;
-}
-
 .pics {
     width: 100%;
     display: flex;
@@ -256,27 +264,28 @@ footer a:focus,
     border-radius: 8px;
 }
 
-.sponsorship-form-container {
+.button-container {
     display: flex;
     justify-content: center;
 }
 
-.sponsorship-form {
+.button {
     color: black;
     text-decoration: none;
     padding: 8px 70px;
     border-radius: 4px;
     margin: 0 5px;
     background-color: var(--g2);
-    transition: background-color 0.3s ease;
     font-family: var(--goth);
     font-size: 26px;
     margin: 0 auto;
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
-.sponsorship-form:hover,
-.sponsorship-form:focus {
+a.button:hover,
+a.button:focus {
     background-color: var(--g1);
+    border: 3px solid rgba(0, 0, 0, .3);
 }
 
 .logo-container {
@@ -364,15 +373,21 @@ iframe {
     flex-wrap: wrap;
 }
 
-.details div iframe,
+.details div a,
 .details div p {
     width: 45%;
     margin: 20px 0;
+    overflow: hidden;
 }
 
-.details div iframe {
+.details div a {
     border-radius: 5px;
     height: 250px;
+}
+
+
+.details div a img {
+    width: 100%;
 }
 
 footer {
@@ -405,9 +420,7 @@ footer p {
     font-size: 13px;
 }
 
-@media (max-width: 1300px) {
-    
-}
+@media (max-width: 1300px) {}
 
 @media (max-width: 1024px) {
     header h1 {
